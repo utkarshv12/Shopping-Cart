@@ -1,0 +1,12 @@
+.env
+.DS_Store
+
+# Ignore backend compiled binaries
+/backend/*.exe
+/backend/*.exe~
+/backend/*.dll
+/backend/*.so
+/backend/*.dylib
+
+# Optional: ignore uploaded images if you don't want them in repo
+backend/static/images/
