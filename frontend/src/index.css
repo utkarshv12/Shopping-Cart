@@ -1,0 +1,23 @@
+:root{
+  --bg-1: #0f172a;
+  --bg-2: #071126;
+  --card-bg: #ffffff;
+  --muted: #6b7280;
+  --accent-start: #667eea;
+  --accent-end: #764ba2;
+  --glass: rgba(255,255,255,0.06);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, var(--accent-start) 0%, var(--accent-end) 100%);
+  color: #0b1220;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
