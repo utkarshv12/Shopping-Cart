@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/shoply/static/css/main.4924210c.css",
+    "main.js": "/shoply/static/js/main.3155391d.js",
+    "index.html": "/shoply/index.html",
+    "main.4924210c.css.map": "/shoply/static/css/main.4924210c.css.map",
+    "main.3155391d.js.map": "/shoply/static/js/main.3155391d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4924210c.css",
+    "static/js/main.3155391d.js"
+  ]
+}
