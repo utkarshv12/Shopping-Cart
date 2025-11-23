@@ -1,0 +1,20 @@
+.cart-overlay { position:fixed; inset:0; background:rgba(6,8,15,0.45); z-index:2200; display:flex; justify-content:flex-end; }
+.cart-drawer { width:420px; max-width:92vw; height:100vh; padding:18px; box-shadow: -20px 0 40px rgba(2,6,23,0.28); display:flex; flex-direction:column; gap:12px }
+.cart-header { display:flex; align-items:center; justify-content:space-between }
+.cart-loading, .cart-empty { padding:24px; text-align:center }
+.cart-list { list-style:none; padding:0; margin:0; overflow:auto; display:flex; flex-direction:column; gap:12px }
+.cart-item { display:flex; gap:12px; align-items:center; padding:10px; border-radius:10px; background:linear-gradient(180deg, rgba(255,255,255,0.96), rgba(250,250,254,0.98)); box-shadow: 0 8px 20px rgba(2,6,23,0.06) }
+.cart-thumb { width:90px; height:64px; object-fit:cover; border-radius:8px }
+.cart-item-meta { flex:1 }
+.cart-item-meta .muted { color:var(--muted); font-size:13px }
+.cart-item-actions { display:flex; gap:8px }
+.cart-footer { margin-top:auto; display:flex; justify-content:space-between; align-items:center; gap:12px }
+.cart-total { font-weight:800; font-size:18px; color:var(--bg-1) }
+.cart-buttons { display:flex; gap:8px }
+.btn-danger { background:#ff385c; color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer }
+.btn-secondary { background: rgba(255,255,255,0.06); border:none; padding:8px 12px; border-radius:8px; cursor:pointer; color:white }
+.btn-primary { background: linear-gradient(135deg,var(--accent-start),var(--accent-end)); color:#fff; border:none; padding:8px 12px; border-radius:8px; cursor:pointer }
+.icon-btn { border:none; background:transparent; color:inherit; cursor:pointer; font-size:16px }
+.glass { background: rgba(255,255,255,0.04); backdrop-filter: blur(6px); border-radius:12px }
+.fade-in { animation: slideIn .28s cubic-bezier(.2,.8,.2,1) }
+@keyframes slideIn { from { transform: translateX(10px); opacity:0 } to { transform:none; opacity:1 } }
