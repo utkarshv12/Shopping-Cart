@@ -1,1 +1,108 @@
+{
+  "info": {
+    "name": "Shopping Cart API",
+    "_postman_id": "shopping-cart-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "string"
+    },
+    {
+      "key": "cartId",
+      "value": "1",
+      "type": "string"
+    },
+    {
+      "key": "itemId",
+      "value": "1",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Create Order (from specific cart)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"},
+          {"key": "Authorization", "value": "Bearer {{token}}"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cart_id\": {{cartId}}\n}",
+          "options": {"raw": {"language": "json"}}
+        },
+        "url": {
+          "raw": "{{baseUrl}}/orders",
+          "host": ["{{baseUrl}}"],
+          "path": ["orders"]
+        }
+      },
+      "response": [],
+      "description": "Create an order. If `cart_id` is omitted the server will convert the current user's cart into an order."
+    },
+    {
+      "name": "Create Order (from current user cart)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"},
+          {"key": "Authorization", "value": "Bearer {{token}}"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{}",
+          "options": {"raw": {"language": "json"}}
+        },
+        "url": {
+          "raw": "{{baseUrl}}/orders",
+          "host": ["{{baseUrl}}"],
+          "path": ["orders"]
+        }
+      },
+      "response": [],
+      "description": "Create an order from the current authenticated user's cart (no `cart_id` supplied)."
+    },
+    {
+      "name": "Get Cart By ID",
+      "request": {
+        "method": "GET",
+        "header": [
+          {"key": "Authorization", "value": "Bearer {{token}}"}
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/carts/{{cartId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["carts", "{{cartId}}"]
+        }
+      },
+      "response": [],
+      "description": "Fetch a cart by its id. Non-admin users can only fetch their own carts." 
+    },
+    {
+      "name": "Remove Item From Cart",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {"key": "Authorization", "value": "Bearer {{token}}"}
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/carts/items/{{itemId}}",
+          "host": ["{{baseUrl}}"],
+          "path": ["carts", "items", "{{itemId}}"]
+        }
+      },
+      "response": [],
+      "description": "Remove an item from the authenticated user's cart by `item_id`."
+    }
+  ]
+}
 
